@@ -1,0 +1,217 @@
+:root {
+    --laranja: #df6300;
+    --preto: #141414;
+    --laranja-claro: #f78c25;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Elementos base */
+
+body {
+    background: var(--preto);
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+
+.container {
+    margin-left: 20px;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo {
+    margin-left: 5px;
+    color: var(--laranja);
+    font-family: 'Arial Black', Helvetica, sans-serif;
+    font-size: 40px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #aaa;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin-right: 10px;
+}
+
+header nav a:hover {
+    color: var(--laranja-claro);
+}
+
+/* Anime principal */
+
+.filme-principal {
+    font-size: 16px;
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .7)100%), url(../img/my-hero-academia_banner.jpg);
+    background-size: cover;
+    background-position: center 40%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.filme-principal .descricao {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.filme-principal .titulo {
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 10%;
+}
+
+.botao {
+    background-color: rgba(0, 0, 0, .5);
+    border: none;
+    color: var(--laranja-claro);
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-right: 15px;
+    padding: 15px 30px;
+    cursor: pointer;
+    transition: .3s ease all;
+}
+
+.botao:hover {
+    background-color: var(--laranja-claro);
+    color: black;
+}
+
+.botao i {
+    margin-right: 7px;
+}
+
+.filme-principal .container {
+    width: 70%;
+}
+
+.carousel-filmes {
+    margin: 10px;
+}
+
+.carousel-filmes h3 {
+    font-size: 35px;
+}
+
+.box-filme {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+footer {
+    margin: 20px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Modal */
+div.modal {
+    background-color: black;
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .4)100%);
+    border: 5px solid var(--laranja);
+    padding: 30px;
+    max-width: 700px;
+}
+
+.modal .container {
+    display: flex;
+}
+
+.modal figure {
+    flex-shrink: 2;
+    margin-right: 20px;
+}
+
+.modal img {
+    width: 100%;
+}
+
+.modal section {
+    flex-shrink: 3;
+}
+
+.modal h4 {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.modal p {
+    margin-top: 10px;
+    font-size: 21px;
+}
+
+.modal a.close-modal[class*="icon-"] {
+    top: -10px;
+    right: -10px;
+    width: 25px;
+    height: 25px;
+    color: #fff;
+    line-height: 1.25;
+    text-align: center;
+    text-decoration: none;
+    text-indent: 0;
+    background: var(--laranja-claro);
+    border: 2px solid #fff;
+    border-radius: 26px;
+    -moz-box-shadow:    1px 1px 5px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    box-shadow:         1px 1px 5px rgba(0,0,0,0.5);
+}
+
+/* Media Queries */
+@media screen and (max-width: 700px) {
+    header .container {
+        flex-direction: column;
+    }
+
+    .botao {
+        margin-top: 5px;
+        width: 250px;
+    }
+
+    div.modal {
+        padding: 10px;
+    }
+
+    .modal .container {
+        flex-direction: column;
+    }
+
+    .modal figure {
+        order: 2;
+        width: 80%;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .descricao {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .filme-principal {
+        font-size: 16px;
+        background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .7)100%), url(../img/my-hero-academia_banner.jpg);
+        background-size: cover;
+        background-position: center 40%;
+        height: 550px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+}
