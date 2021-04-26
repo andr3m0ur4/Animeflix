@@ -27,7 +27,15 @@ $(() => {
         return false
     })
 
-    $('.botao').eq(1).click(e => {
+    $('.botao').eq(0).click(() => {
+        $('#modal2').modal({
+            fadeDuration: 250,
+            closeClass: 'icon-remove',
+            closeText: 'X'
+        })
+    })
+
+    $('.botao').eq(1).click(() => {
         $('#modal').modal({
             fadeDuration: 250,
             closeClass: 'icon-remove',
